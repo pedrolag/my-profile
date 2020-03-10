@@ -1,5 +1,7 @@
 # Bem-vindo!
-Esta é a minha página pessoal. Nesta página você irá encontrar algumas informações sobre minha vida profissional como programador/designer/desenvolvedor web.
+Esta é a minha página pessoal. Nesta página você irá encontrar algumas informações sobre minha vida profissional como programador/designer/desenvolvedor web. 
+
+Para acessar a minha página pessoal, [clique aqui](https://pedrolag.github.io/my-profile/).
 
 ## Estrutura da página
 A página atualmente está dividida em **4 secções**, sendo elas:
@@ -9,7 +11,7 @@ A página atualmente está dividida em **4 secções**, sendo elas:
 3. Secção de habilidades/competências
 4. Secção de contato
 
-Dentro de cada uma das secções, você irá encontrar algumas informações sobre mim. Caso algo lhe interesse, estarei sempre a disposição para discussões sobre quaisquer assunto. 😉
+Dentro de cada uma das secções, você irá encontrar algumas informações sobre mim. Caso algo lhe interesse, estarei sempre a disposição para discussões sobre quaisquer assunto. 
 
 ### Secção de boas-vindas
 Esta primeira secção da página é responsável por dar a mensagem de boas-vindas ao usuário, apresentar o meu nome completo e por fim disponibilizar um link para o meu currículo profissional.
