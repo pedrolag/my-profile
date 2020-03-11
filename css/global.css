@@ -36,7 +36,7 @@ main {
     height: 100%;
 }
 
-.item-progress:hover {
+.item-progress .progress-bar:hover {
     -webkit-animation-duration: 1s;
     animation-duration: 1s;
     -webkit-animation-fill-mode: both;
@@ -179,6 +179,14 @@ main {
     -webkit-box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.3);
     box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.3);
     cursor: pointer;
+}
+
+@media only screen and (max-width: 900px) {
+
+    .container {
+        padding: 0px 10%;
+    }
+
 }
 
 
@@ -364,10 +372,6 @@ main {
         font-size: 24px !important;
     }
 
-    #about .grid .item.info {
-        padding-bottom: 0px;
-    }
-
     #about .grid .item.info * {
         text-align: left;
     }
@@ -433,12 +437,8 @@ main {
     color: var(--color-1);
 }
 
-#skills .grid .item .item-progress {
-    max-width: 300px;
-}
-
 #skills .grid .item .item-progress ~ h2 {
-    margin-top: 40px;
+    margin-top: 48px;
 }
 
 #skills .grid .item .item-progress:not(:last-child) {
@@ -448,7 +448,7 @@ main {
 @media only screen and (max-width: 900px) {
     
     #skills .grid {
-        padding-top: 80px;
+        /* padding-top: 80px; */
         position: initial;
         top: unset;
         transform: unset;
@@ -466,10 +466,6 @@ main {
 
     #skills .grid .item {
         padding: 24px;
-    }
-
-    #skills .grid .item:not(:last-child) {
-        padding-bottom: 0px;
     }
 
 }
@@ -510,11 +506,12 @@ main {
     text-align: center;
 }
 
-#contact .grid .item .contact .contact-icon i.material-icons {
-    font-size: 70px;
-    width: 100px;
-    height: 100px;
-    line-height: 100px;
+#contact .grid .item .contact .contact-icon i.material-icons,
+#contact .grid .item .contact .contact-icon i.fab {
+    font-size: 40px;
+    width: 64px;
+    height: 64px;
+    line-height: 64px;
     border-radius: 50%;
     background-color: var(--color-2);
     color: #fff;
@@ -525,7 +522,7 @@ main {
     text-transform: uppercase;
     font-weight: 600;
     color: var(--color-3);
-    font-size: 20px;
+    font-size: 15px;
 }
 
 #contact .grid .item.col1 {
@@ -553,17 +550,6 @@ main {
 
     #contact .grid .item.col1 {
         padding-bottom: 60px;
-    }
-
-    #contact .grid .item .contact h1 {
-        font-size: 15px;
-    }
-
-    #contact .grid .item .contact .contact-icon i.material-icons {
-        font-size: 40px;
-        width: 64px;
-        height: 64px;
-        line-height: 64px;
     }
 
 }
