@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="lib/materialize/css/materialize.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="lib/materialize/js/materialize.js"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+
+    <div id="app">
+        
+        <div id="my-navbar">
+
+            <div class="bg-form-1"></div>
+
+            <div class="content">
+
+                <ul class="shadow">
+                    <li v-for="objSection in arrSections">
+                        <a :href="objSection.str_href" class="waves-effect">{{ objSection.str_name }}</a>
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <div id="home" class="my-section" data-section-name="Início">
+
+            <div class="bg-form-1"></div>
+
+            <div class="content">
+
+                <div class="greetings-text">
+                    <h2>Olá! Eu sou</h2>
+                    <h1>Pedro Gonçalves</h1>
+                    <h3>UX/UI Designer | Front-end developer</h3>
+                </div>
+                
+                <div class="greetings-photo-container">
+                    <div class="greetings-photo-bg bg-1 organic-bg-1"></div>
+                    <div class="greetings-photo-bg bg-2 organic-bg-2"></div>
+                    <div class="greetings-photo organic"></div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="about-me" class="my-section" data-section-name="Sobre mim">
+
+            <div class="content">
+
+                <!-- <div class="bg-form-1"></div> -->
+
+                <div class="photos-container">
+                    <div class="photo-html"></div>
+                    <div class="photo-css"></div>
+                    <div class="photo-js"></div>
+                </div>
+
+                <div class="text">
+                    <h1>Sobre mim</h1>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                        when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="about-me2" class="my-section" data-section-name="Sobre mim"></div>
+
+        <div id="about-me3" class="my-section" data-section-name="Sobre mim"></div>
+
+    </div>
+    
+    <script src="js/index.js"></script>
+
+</body>
+</html>
