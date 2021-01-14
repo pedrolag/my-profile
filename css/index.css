@@ -119,12 +119,17 @@ html, body, #app {
     z-index: 3;
 }
 
-.greetings-text * {
+.greetings-text h1, .greetings-text p {
     margin: 0px;
     padding: 0px;
 
     font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
     color: #333;
+}
+
+.greetings-text .btn-large {
+    margin-top: 24px;
+    background-color: var(--color-4) !important;
 }
 
 .greetings-text h1 {
@@ -309,15 +314,24 @@ html, body, #app {
     animation-iteration-count: infinite;
 }
 
-#about-me .content .text * {
+.text-flex-container {
+    display: flex;
+    align-content: flex-start;
+    justify-content: flex-start;
+}
+.text-flex-container > div {
+    width: 50%;
+}
+
+.text * {
     color: var(--color-1);
 }
 
-#about-me .content .text h1 {
+.text h1 {
     font-size: 40px;
 }
 
-#about-me .content .text p {
+.text p {
     font-size: 20px;
 }
 
@@ -363,7 +377,7 @@ html, body, #app {
     width: 80%;
     height: 80%;
     position: absolute;
-    top: 200px;
+    top: 160px;
     left: 100px;
     background-image: url('../img/code-js.png');
     background-size: cover;
@@ -424,9 +438,17 @@ html, body, #app {
     left: 60%;
 }
 
+#design  .text-flex-container > div:first-of-type {
+    padding-right: 64px;
+}
+
+#design  .text-flex-container > div:last-of-type {
+    padding-left: 64px;
+}
+
 #design .text {
     position: absolute;
-    width: 500px;
+    width: 70%;
 
     top: 50%;
     left: 50%;
