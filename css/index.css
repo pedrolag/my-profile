@@ -258,7 +258,6 @@ html, body, #app {
     width: 300px;
     height: 300px;
     position: absolute;
-    background-color: #f00;
     clip-path: polygon(5% 5%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
     z-index: 1;
 }
@@ -361,6 +360,10 @@ html, body, #app {
     filter:  brightness(100%);
 }
 
+#design {
+    background-color: var(--color-2);
+}
+
 @media only screen and (max-width: 1700px) {
 
 }
@@ -369,3 +372,10 @@ html, body, #app {
     -webkit-box-shadow: 0 24px 38px 3px rgba(128, 128, 128, 0.14), 0 9px 46px 8px rgba(128, 128, 128, 0.12), 0 11px 15px -7px rgba(128, 128, 128, 0.2);
     box-shadow: 0 24px 38px 3px rgba(128, 128, 128, 0.14), 0 9px 46px 8px rgba(128, 128, 128, 0.12), 0 11px 15px -7px rgba(128, 128, 128, 0.2);
 }
+
+svg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
