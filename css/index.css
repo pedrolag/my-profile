@@ -241,6 +241,19 @@ html, body, #app {
     100% {border-radius: 12% 88% 21% 79% / 73% 41% 59% 27%;}
 }
 
+@keyframes diving {
+    0% {right: 25%;}
+    50% {right: 22%;}
+    100% {right: 25%;}
+}
+
+@keyframes bubble {
+    0% {border-radius: 50% 50% 49% 51% / 45% 51% 49% 55%;}
+    33% {border-radius: 54% 46% 46% 54% / 54% 55% 45% 46%;}
+    66% {border-radius: 50% 50% 58% 42% / 49% 45% 55% 51%;}
+    100% {border-radius: 50% 50% 49% 51% / 45% 51% 49% 55%;}
+}
+
 #about-me {
     width: 100%;
     height: 100%;
@@ -362,6 +375,80 @@ html, body, #app {
 
 #design {
     background-color: var(--color-2);
+}
+
+#design .bg-form-1 {
+    width: 100%;
+    height: 80%;
+
+    position: absolute;
+    top: 20%;
+    left: 0%;
+    z-index: 2;
+
+    background-image: linear-gradient(180deg, transparent, rgba(0, 0, 0, .25));
+}
+
+#design .bubble {
+    border-radius: 50%;
+    border: solid 1px rgba(255, 255, 255, .15);
+
+    position: absolute;
+    z-index: 3;
+
+    animation-name: bubble;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+
+    background-image: linear-gradient(50deg, rgba(255, 255, 255, .15), transparent);
+}
+
+#design .bubble.bubble-1 {
+    width: 20px;
+    height: 20px;
+    top: 53%;
+    left: 20%;
+}
+
+#design .bubble.bubble-2 {
+    width: 24px;
+    height: 24px;
+    top: 66%;
+    left: 40%;
+}
+
+#design .bubble.bubble-3 {
+    width: 22px;
+    height: 22px;
+    top: 70%;
+    left: 60%;
+}
+
+#design .text {
+    position: absolute;
+    width: 500px;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    z-index: 2;
+}
+
+#design .text * {
+    color: #fff;
+}
+
+#design .skuba {
+    height: 300px;
+    position: absolute;
+    bottom: 5%; 
+    right: 25%;
+    z-index: 3;
+
+    animation-name: diving;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
 }
 
 @media only screen and (max-width: 1700px) {
