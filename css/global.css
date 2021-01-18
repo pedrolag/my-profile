@@ -365,12 +365,12 @@ p {
 
 /* DESKTOP */
 
-@media only screen and (max-width: 1499px) {
+@media only screen and (min-width: 1200px) {
 
     :root {
         --page-padding: 20%;
         --front-end-sun-size: 120px;
-        --design-bubble-size: 56px;
+        --design-bubble-size: 40px;
     }
 
     #my-navbar ul {
@@ -501,10 +501,10 @@ p {
     }
 
     #front-end .background .birds {
-        width: 900px;
-        height: 600px;
+        width: 500px;
+        height: 500px;
         position: absolute;
-        top: 56px;
+        top: 32px;
         right: 0;
         background-image: url('../img/birds.gif');
         background-size: contain;
@@ -572,7 +572,7 @@ p {
 
     #design .background .bubbles .bubble.adobe-xd {
         transform: translate(-50%, -50%) scale(1.2);
-        top: 40%;
+        top: 35%;
         left: 66%;
         animation-duration: 6s;
     }
@@ -583,7 +583,7 @@ p {
 
     #design .background .bubbles .bubble.balsamiq {
         transform: translate(-50%, -50%) scale(1.2);
-        top: 35%;
+        top: 23%;
         left: 33%;
         animation-duration: 12s;
     }
@@ -591,8 +591,7 @@ p {
     #design .background .diver {
         height: 200px;
         position: absolute;
-        bottom: 0;
-        left: 50%;
+        bottom: -125px;
         transform: translate(-50%, -50%);
         animation-name: diver;
         animation-duration: 16s;
@@ -665,13 +664,13 @@ p {
 
     @keyframes diver {
         0% {
-            left: 48%;
+            left: 78%;
         }
         50% {
-            left: 52%;
+            left: 80%;
         }
         100% {
-            left: 48%;
+            left: 78%;
         }
     }
 
@@ -683,6 +682,54 @@ p {
         --page-padding: 20%;
         --front-end-sun-size: 120px;
         --design-bubble-size: 80px;
+    }
+
+    #front-end .background .birds {
+        top: 48px;
+        right: 150px;
+    }
+
+    #design .background .bubbles .bubble.figma {
+        transform: translate(-50%, -50%) scale(2.5);
+        top: 25%;
+        left: 50%;
+        animation-duration: 8s;
+    }
+
+    #design .background .bubbles .bubble.adobe-xd {
+        transform: translate(-50%, -50%) scale(1.2);
+        top: 40%;
+        left: 66%;
+        animation-duration: 6s;
+    }
+
+    #design .background .bubbles .bubble.balsamiq {
+        transform: translate(-50%, -50%) scale(1.2);
+        top: 35%;
+        left: 33%;
+        animation-duration: 12s;
+    }
+
+    #design .background .diver {
+        height: 200px;
+        position: absolute;
+        bottom: 0;
+        transform: translate(-50%, -50%);
+        animation-name: diver;
+        animation-duration: 16s;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes diver {
+        0% {
+            left: 48%;
+        }
+        50% {
+            left: 52%;
+        }
+        100% {
+            left: 48%;
+        }
     }
 
 }
