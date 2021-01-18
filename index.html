@@ -3,6 +3,7 @@
 <head>
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="lib/fontawesome/css/all.css" rel="stylesheet">
     <link href="lib/materialize/css/materialize.css" rel="stylesheet">
     <link href="css/index.css" rel="stylesheet">
 
@@ -22,15 +23,15 @@
 
     <div id="app">
         
-        <div id="my-navbar">
+        <div id="my-navbar" class="shadow">
 
             <div class="bg-form-1"></div>
 
             <div class="content">
 
-                <ul class="shadow">
+                <ul class="">
                     <li v-for="objSection in arrSections">
-                        <a :href="objSection.str_href" class="waves-effect">{{ objSection.str_name }}</a>
+                        <a :href="objSection.str_href" class="waves-effect waves-light">{{ objSection.str_name }}</a>
                     </li>
                 </ul>
 
@@ -39,8 +40,10 @@
         </div>
 
         <div id="home" class="my-section" data-section-name="Início">
-
-            <div class="bg-form-1"></div>
+            
+            <div class="background">
+                <div class="bg-form-1"></div>
+            </div>
 
             <div class="content">
 
@@ -48,11 +51,10 @@
                     <h2>Olá! Eu sou</h2>
                     <h1>Pedro Gonçalves</h1>
                     <h3>UX/UI Designer | Front-end developer</h3>
-
-                    <button type="button" class="btn-large waves-effect waves-light">
-                        <i class="material-icons left">download</i>
-                        Veja o meu currículo
-                    </button>
+                    <a href="https://bit.ly/38PJuNN" target="_blank" class="btn-large waves-effect waves-light">
+                        <i class="fab fa-linkedin left"></i>
+                        Entre em contato
+                    </a>
                 </div>
                 
                 <div class="greetings-photo-container">
@@ -68,8 +70,6 @@
         <div id="front-end" class="my-section" data-section-name="Front-End">
 
             <div class="content">
-
-                <!-- <div class="bg-form-1"></div> -->
 
                 <div class="photos-container">
                     <div class="photo-html"></div>
@@ -92,38 +92,81 @@
         </div>
 
         <div id="design" class="my-section" data-section-name="Design UX/UI" style="position: relative;">
-            <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs></defs><path id="wave-1" d=""/></svg>
-            <svg width="100%" height="95%" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs></defs><path id="wave-2" d=""/></svg>
-            <div class="bg-form-1"></div>
-            <div class="bubble bubble-1"></div>
-            <div class="bubble bubble-2"></div>
-            <div class="bubble bubble-3"></div>
-            <img class="skuba" src="img/scuba.png">
 
-            <div class="text">
-                <h1>Design UX/UI</h1>
-                <div class="text-flex-container">
-                    <div>
-                        <p>
-                            Depois de ganhar uma boa experiência com o front, descobri uma área que se preocupa ainda
-                            mais com a experiência do usuário como um todo. Resolvi então buscar mais conhecimento na parte 
-                            do design de interfaces e aplicar no meu dia a dia como desenvolvedor front-end.
-                        </p>
-                    </div>
-                    <div>
-                        <p>
-                            Hoje, continuo estudando cada vez mais e explorando este grande oceano que é a área de Design UX/UI.
-                            Quanto mais exemplos de ótimas interfaces eu encontro por aí, mais eu vejo que estou no caminho certo
-                            para me tornar um melhor profissional.
-                        </p>
+            <div class="background">
+                <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs></defs><path id="wave-1" d=""/></svg>
+                <svg width="100%" height="95%" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs></defs><path id="wave-2" d=""/></svg>
+                <div class="bg-form-1"></div>
+                <div class="bubble bubble-1"></div>
+                <div class="bubble bubble-2"></div>
+                <div class="bubble bubble-3"></div>
+                <img class="skuba" src="img/scuba.png">
+            </div>
+
+            <div class="content">
+                <div class="text">
+                    <h1>Design UX/UI</h1>
+                    <div class="text-flex-container">
+                        <div>
+                            <p>
+                                Depois de ganhar uma boa experiência com o front, descobri uma área que se preocupa ainda
+                                mais com a experiência do usuário como um todo. Resolvi então buscar mais conhecimento na parte 
+                                do design de interfaces e aplicar no meu dia a dia como desenvolvedor front-end.
+                            </p>
+                        </div>
+                        <div>
+                            <p>
+                                Hoje, continuo estudando cada vez mais e explorando este grande oceano que é a área de Design UX/UI.
+                                Quanto mais exemplos de ótimas interfaces eu encontro por aí, mais eu vejo que estou no caminho certo
+                                para me tornar um melhor profissional.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div id="about-me" class="my-section" data-section-name="Sobre mim">
+        <div id="social" class="my-section" data-section-name="Contato">
 
-            <div class="bg-form-1"></div>
+            <div class="background">
+                <div class="bg-form-1"></div>
+                
+            </div>
+
+            <div class="content">
+
+                <div class="flex-container-rows">
+
+                    <div class="title">
+                        <h1>Quer saber mais sobre mim?</h1>
+                    </div>
+
+                    <div class="flex-container-columns">
+                        <div class="contact-me">
+                            <p>
+                                Entre em contato comigo através do email
+                                <span>pedrolagoncalves@gmail.com</span>
+                            </p>
+                        </div>
+
+                        <div class="social-media">
+                            <div>
+                                <a href="#social" class="social-item waves-effect waves-light">
+                                    <i class="fab fa-linkedin left"></i>
+                                </a>
+                                <a href="#social" class="social-item waves-effect waves-light">
+                                    <i class="fab fa-instagram left"></i>
+                                </a>
+                                <a href="#social" class="social-item waves-effect waves-light">
+                                    <i class="fab fa-facebook left"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
 
         </div>
 

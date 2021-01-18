@@ -24,6 +24,31 @@ html, body, #app {
     height: 100%;
 }
 
+.my-section {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.my-section .background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 0;
+}
+
+.my-section .content {
+    width: 100%;
+    height: 100%;
+    padding: 0 var(--page-padding);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+}
+
 #my-navbar {
     width: var(--my-navbar-width);
     height: var(--my-navbar-height);
@@ -35,6 +60,8 @@ html, body, #app {
     padding: 0px var(--page-padding);
 
     z-index: 10;
+
+    background-color: #222;
 }
 
 #my-navbar .content {
@@ -43,34 +70,40 @@ html, body, #app {
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
 
 #my-navbar ul {
+    width: 100%;
     height: 100%;
     margin: 0px;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 0 0 24px 24px;
-    padding: 0px 24px;
-    background-color: var(--color-1);
+    justify-content: flex-start;
+    /* border-radius: 0 0 24px 24px; */
 }
 
 #my-navbar li {
     float: left;
+    height: 100%;
+    width: 120px;
+    text-align: center;
 }
 
 #my-navbar a {
-    padding: 8px 12px;
-    border-radius: 16px;
-    color: #333;
-}
-
-.my-section {
     width: 100%;
     height: 100%;
-    position: relative;
+    padding: 8px 12px;
+    line-height: 48px;
+    /* border-radius: 16px; */
+    color: #fff;
+    transition: .2s;
+    border-bottom: solid 2px transparent;
+}
+
+#my-navbar li:hover a {
+    /* border-bottom: solid 4px #333; */
+    background-color: #333;
+    font-weight: bold;
+    border-bottom: solid 2px var(--color-4);;
 }
 
 #home {
@@ -97,35 +130,19 @@ html, body, #app {
     background-color: var(--color-1);
 }
 
-#home .content {
-    width: 100%;
-    height: 100%;
-
-    padding: 0px var(--page-padding);
-
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    z-index: 1;
-
-    border-radius: 0px 0px 0px var(--border-radius);
-    
-}
-
 .greetings-text {
     position: absolute;
     top: 50%;
     left: calc(var(--page-padding));
     transform: translateY(-50%);
     z-index: 3;
+    color: #333;
+    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
 }
 
 .greetings-text h1, .greetings-text p {
     margin: 0px;
     padding: 0px;
-
-    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
-    color: #333;
 }
 
 .greetings-text .btn-large {
@@ -282,16 +299,6 @@ html, body, #app {
 }
 
 #front-end .content {
-    width: 100%;
-    height: 100%;
-
-    padding: 0px var(--page-padding);
-
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    z-index: 1;
-
     border-radius: 0px var(--border-radius) 0px 0px;
     background-color: var(--color-2);
 }
@@ -474,29 +481,84 @@ html, body, #app {
     animation-iteration-count: infinite;
 }
 
-#about-me {
-    background-color: var(--color-1);
+#social {
+    height: 0px;
 }
 
-#about-me .bg-form-1 {
+#social .content {
+    height: unset;
+}
+
+#social .bg-form-1 {
     width: 100%;
-    height: 100px;
+    height: 300px;
 
     position: absolute;
     margin-top: -50px;
     z-index: 2;
 
-    background-color: var(--color-1);
+    background-color: #222;
     border-radius: 50% 50% 0 0 / 30px 30px 0 0;
 }
 
-@media only screen and (max-width: 1700px) {
 
+.social-item {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-image: var(--grad-4);
+    position: relative;
+}
+
+.social-item i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    color: #fff !important;
+}
+
+#social .flex-container-rows {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 2;
+    padding: 0px 15%;
+    color: #fff;
+}
+
+#social .flex-container-columns {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-content: flex-start;
+    justify-content: space-between;
+    
+}
+
+#social .flex-container .contact-me,
+#social .flex-container .social-media {
+    width: 50%;
+}
+
+#social h1 {
+    font-size: 40px;
+}
+
+#social span {
+    font-weight: 700;
+    font-size: 24px;
+    display: block;
 }
 
 .shadow {
-    -webkit-box-shadow: 0 24px 38px 3px rgba(128, 128, 128, 0.14), 0 9px 46px 8px rgba(128, 128, 128, 0.12), 0 11px 15px -7px rgba(128, 128, 128, 0.2);
-    box-shadow: 0 24px 38px 3px rgba(128, 128, 128, 0.14), 0 9px 46px 8px rgba(128, 128, 128, 0.12), 0 11px 15px -7px rgba(128, 128, 128, 0.2);
+    -webkit-box-shadow: 0 24px 38px 3px rgba(34, 34, 34, 0.14), 0 9px 46px 8px rgba(34, 34, 34, 0.12), 0 11px 15px -7px rgba(34, 34, 34, 0.2);
+    box-shadow: 0 24px 38px 3px rgba(34, 34, 34, 0.14), 0 9px 46px 8px rgba(34, 34, 34, 0.12), 0 11px 15px -7px rgba(34, 34, 34, 0.2);
 }
 
 svg {
@@ -505,3 +567,52 @@ svg {
     left: 0;
 }
 
+@media only screen and (max-width: 1400px) {
+    :root {
+        --page-padding: 5%;
+    }
+}
+
+@media only screen and (max-width: 1050px) {
+    :root {
+        --page-padding: 5%;
+    }
+
+    #my-navbar ul {
+        justify-content: center;
+    }
+
+    #home .content .greetings-text {
+        width: 100%;
+        left: 50%;
+        top: 50%;
+        transform: unset;
+        transform: translate(-50%, 25%) scale(.8);
+        text-align: center;;
+    }
+
+    #home .content .greetings-photo-container {
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -75%) scale(.8);
+    }
+
+    #front-end, #design, #social {
+        display: none;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+
+    #home .content .greetings-photo-container {
+        display: none;
+    }
+
+    #home .content .greetings-text {
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%) scale(.8);
+    }
+
+}
