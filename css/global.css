@@ -341,7 +341,33 @@ p {
 }
 
 #social .text span {
+    color: var(--color-4);
     font-weight: bold;
+}
+
+#social a {
+    color: var(--color-4);
+}
+
+
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar {
+    width: 4px;
+    border-radius: 2px;
+}
+  
+::-webkit-scrollbar-track {
+    background: #333;
+}
+  
+::-webkit-scrollbar-thumb {
+    background: var(--color-4);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-4);
 }
 
 
