@@ -5,7 +5,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="lib/fontawesome/css/all.css" rel="stylesheet">
     <link href="lib/materialize/css/materialize.css" rel="stylesheet">
-    <link href="css/index.css" rel="stylesheet">
+    <link href="css/global.css" rel="stylesheet">
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script src="lib/materialize/js/materialize.js"></script>
@@ -25,65 +25,64 @@
         
         <div id="my-navbar" class="shadow">
 
-            <div class="bg-form-1"></div>
-
-            <div class="content">
-
-                <ul class="">
-                    <li v-for="objSection in arrSections">
-                        <a :href="objSection.str_href" class="waves-effect waves-light">{{ objSection.str_name }}</a>
-                    </li>
-                </ul>
-
-            </div>
+            <ul>
+                <li v-for="objSection in arrSections">
+                    <a :href="objSection.str_href" class="waves-effect waves-light">{{ objSection.str_name }}</a>
+                </li>
+            </ul>
 
         </div>
 
+
+
         <div id="home" class="my-section" data-section-name="Início">
             
-            <div class="background">
-                <div class="bg-form-1"></div>
-            </div>
-
             <div class="content">
 
-                <div class="greetings-text">
+                <div class="text">
                     <h2>Olá! Eu sou</h2>
                     <h1>Pedro Gonçalves</h1>
-                    <h3>UX/UI Designer | Front-end developer</h3>
+                    <div>
+                        <h3>UX/UI Designer | Front-end developer</h3>
+                    </div>
                     <a href="https://bit.ly/38PJuNN" target="_blank" class="btn-large waves-effect waves-light">
                         <i class="fab fa-linkedin left"></i>
                         Entre em contato
                     </a>
                 </div>
-                
-                <div class="greetings-photo-container">
-                    <div class="greetings-photo-bg bg-1 organic-bg-1"></div>
-                    <div class="greetings-photo-bg bg-2 organic-bg-2"></div>
-                    <div class="greetings-photo organic"></div>
+
+                <div class="photo-container">
+                    <div class="bg-1"></div>
+                    <div class="bg-2"></div>
+                    <div class="photo"></div>
                 </div>
 
             </div>
 
         </div>
 
+
+
         <div id="front-end" class="my-section" data-section-name="Front-End">
 
-            <div class="content">
-
-                <div class="photos-container">
-                    <div class="photo-html"></div>
-                    <div class="photo-css"></div>
-                    <div class="photo-js"></div>
+            <div class="background">
+                <div class="sun">
+                    <div class="sunrays-back"></div>
+                    <div class="sunrays-front"></div>
+                    <div class="body"></div>
                 </div>
+                <div class="birds"></div>
+            </div>
+
+            <div class="content">
 
                 <div class="text">
                     <h1>Front-End</h1>
                     <p>
                         Pouco tempo depois de entrar para a área de desenvolvimento de sistemas descobri
-                        o quão importante era uma boa interface para o usuário. Comecei a me preocupar cada 
+                        o quão importante é uma boa interface para o usuário. Comecei a me preocupar cada 
                         vez mais com a aparência de meus projetos e voltando meus estudos para esta área.
-                        Pouco tempo depois já havia criado uma ceerta afinidade por este mundo :)
+                        Pouco tempo depois já havia criado uma certa afinidade por este mundo :)
                     </p>
                 </div>
 
@@ -91,79 +90,69 @@
 
         </div>
 
-        <div id="design" class="my-section" data-section-name="Design UX/UI" style="position: relative;">
+
+
+        <div id="design" data-section-name="Design UX/UI">
 
             <div class="background">
-                <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs></defs><path id="wave-1" d=""/></svg>
-                <svg width="100%" height="95%" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs></defs><path id="wave-2" d=""/></svg>
-                <div class="bg-form-1"></div>
-                <div class="bubble bubble-1"></div>
-                <div class="bubble bubble-2"></div>
-                <div class="bubble bubble-3"></div>
-                <img class="skuba" src="img/scuba.png">
-            </div>
-
-            <div class="content">
-                <div class="text">
-                    <h1>Design UX/UI</h1>
-                    <div class="text-flex-container">
-                        <div>
-                            <p>
-                                Depois de ganhar uma boa experiência com o front, descobri uma área que se preocupa ainda
-                                mais com a experiência do usuário como um todo. Resolvi então buscar mais conhecimento na parte 
-                                do design de interfaces e aplicar no meu dia a dia como desenvolvedor front-end.
-                            </p>
-                        </div>
-                        <div>
-                            <p>
-                                Hoje, continuo estudando cada vez mais e explorando este grande oceano que é a área de Design UX/UI.
-                                Quanto mais exemplos de ótimas interfaces eu encontro por aí, mais eu vejo que estou no caminho certo
-                                para me tornar um melhor profissional.
-                            </p>
-                        </div>
+                <div class="waves">
+                    <svg width="100%" height="120" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs></defs><path id="wave-1" d=""/></svg>
+                    <svg width="100%" height="180" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs></defs><path id="wave-2" d=""/></svg>
+                </div>
+                <div class="bubbles">
+                    <div class="bubble figma">
+                        <img src="img/figma-logo.png">
+                        <div class="bubble-effect"></div>
+                    </div>
+                    <div class="bubble adobe-xd">
+                        <img src="img/adobe-xd-logo.png">
+                        <div class="bubble-effect"></div>
+                    </div>
+                    <div class="bubble balsamiq">
+                        <img src="img/balsamiq.png">
+                        <div class="bubble-effect"></div>
                     </div>
                 </div>
-            </div>
-        </div>
-
-        <div id="social" class="my-section" data-section-name="Contato">
-
-            <div class="background">
-                <div class="bg-form-1"></div>
-                
+                <img class="diver" src="img/scuba.png">
             </div>
 
             <div class="content">
 
-                <div class="flex-container-rows">
-
-                    <div class="title">
-                        <h1>Quer saber mais sobre mim?</h1>
+                <div class="text-flex-container">
+                    <div class="text-left">
+                        <h1>Design UX/UI</h1>
+                        <p>
+                            Depois de ganhar uma boa experiência com o front, descobri uma área que se preocupa ainda
+                            mais com a experiência do usuário como um todo. Resolvi então buscar mais conhecimento na parte 
+                            do design de interfaces e aplicar no meu dia a dia como desenvolvedor front-end.
+                        </p>
                     </div>
-
-                    <div class="flex-container-columns">
-                        <div class="contact-me">
-                            <p>
-                                Entre em contato comigo através do email
-                                <span>pedrolagoncalves@gmail.com</span>
-                            </p>
-                        </div>
-
-                        <div class="social-media">
-                            <div>
-                                <a href="#social" class="social-item waves-effect waves-light">
-                                    <i class="fab fa-linkedin left"></i>
-                                </a>
-                                <a href="#social" class="social-item waves-effect waves-light">
-                                    <i class="fab fa-instagram left"></i>
-                                </a>
-                                <a href="#social" class="social-item waves-effect waves-light">
-                                    <i class="fab fa-facebook left"></i>
-                                </a>
-                            </div>
-                        </div>
+                    <div class="text-right">
+                        <p>
+                            Hoje, continuo estudando cada vez mais e explorando este grande oceano que é a área de Design UX/UI.
+                            Quanto mais exemplos de ótimas interfaces eu encontro por aí, mais eu vejo que estou no caminho certo
+                            para me tornar um melhor profissional.
+                        </p>
                     </div>
+                </div>
 
+            </div>
+
+        </div>
+
+
+
+        <div id="social" data-section-name="Contato">
+
+            <div class="content">
+
+                <div class="text">
+                    <h1>Quer saber mais sobre mim?</h1>
+                    <p>
+                        Entre em contato comigo através do email
+                        <span>pedrolagoncalves@gmail.com</span>
+                        ou pelo meu perfil do <a href="">LinkedIn</a>.
+                    </p>
                 </div>
 
             </div>

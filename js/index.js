@@ -5,7 +5,7 @@ new Vue({
     },
     methods: {
         getArrSections() {
-            document.querySelectorAll('.my-section').forEach(elm_section => {
+            document.querySelectorAll('[data-section-name]').forEach(elm_section => {
                 this.arrSections.push(
                     {
                         str_name: elm_section.getAttribute('data-section-name'),
@@ -21,17 +21,17 @@ new Vue({
 });
 
 var myWave = $('#wave-1').wavify({
-    height: 60,
-    bones: 5,
-    amplitude: 40,
+    height: 80,
+    bones: 8,
+    amplitude: 10,
     color: '#30475e',
-    speed: .25
+    speed: .2
 });
 
 var myWave2 = $('#wave-2').wavify({
-    height: 60,
-    bones: 3,
-    amplitude: 38,
+    height: 90,
+    bones: 6,
+    amplitude: 10,
     color: '#4b6a8a',
-    speed: .20
+    speed: .15
 });

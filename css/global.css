@@ -1,0 +1,688 @@
+:root {
+    --page-padding: 16px;
+
+    --my-navbar-height: 64px;
+    --my-navbar-background-color: #222;
+    --my-navbar-text-color: #fff;
+    --my-navbar-button-border-color: #f05454;
+
+    --home-background-color: #fff;
+    --home-text-color: #222;
+
+    --front-end-background-color: #222831;
+    --front-end-text-color: #fff;
+    --front-end-sun-size: 64px;
+    --front-end-sun-sunrays-back-color: #7a1919;
+    --front-end-sun-sunrays-front-color: #b43030;
+    --front-end-sun-body-color: #f05454;
+
+    --design-background-color: #4b6a8a;
+    --design-text-color: #fff;
+
+    --social-background-color: #222;
+    --social-text-color: #fff;
+
+    --color-1: #dddddd;
+    --color-2: #222831;
+    --color-3: #30475e;
+    --color-4: #f05454;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+html, body, #app {
+    height: 100%;
+}
+
+.my-section {
+    height: 100%;
+    padding-top: var(--my-navbar-height);
+    position: relative;
+}
+
+h1 {
+    font-weight: 600;
+    font-size: 36px;
+}
+
+h2 {
+    font-weight: 400;
+    font-size: 24px;
+}
+
+h3 {
+    font-weight: 400;
+    font-size: 16px;
+}
+
+p {
+    font-size: 20px;
+}
+
+
+
+/* MY-NAVBAR CSS */
+
+#my-navbar {
+    width: 100%;
+    height: var(--my-navbar-height);
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0px var(--page-padding);
+    z-index: 10;
+    background-color: var(--my-navbar-background-color);
+    -webkit-box-shadow: 0 24px 38px 3px rgba(34, 34, 34, 0.14), 0 9px 46px 8px rgba(34, 34, 34, 0.12), 0 11px 15px -7px rgba(34, 34, 34, 0.2);
+    box-shadow: 0 24px 38px 3px rgba(34, 34, 34, 0.14), 0 9px 46px 8px rgba(34, 34, 34, 0.12), 0 11px 15px -7px rgba(34, 34, 34, 0.2);
+}
+
+#my-navbar ul {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+}
+
+#my-navbar li {
+    width: 120px;
+    height: 100%;
+    float: left;
+    text-align: center;
+}
+
+#my-navbar a {
+    width: 100%;
+    height: 100%;
+    padding: 8px 12px;
+    line-height: 48px;
+    color: var(--my-navbar-text-color);
+    transition: .2s;
+    border-bottom: solid 2px transparent;
+}
+
+#my-navbar li:hover a {
+    font-weight: bold;
+    border-bottom: solid 2px var(--my-navbar-button-border-color);
+}
+
+
+
+/* HOME CSS */
+
+#home {
+    background-color: var(--home-background-color);
+    color: var(--home-text-color);
+}
+
+#home .content {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: var(--my-navbar-height) 0 0;
+}
+
+#home .text {
+    width: 100%;
+    padding: 0 var(--page-padding) 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#home .text h1,
+#home .text p {
+    margin: 0px;
+    padding: 0px;
+}
+
+#home .text .btn-large {
+    margin-top: 24px;
+    background-color: var(--color-4) !important;
+}
+
+#home .text h1 {
+    font-weight: 600;
+    font-size: 36px;
+    margin: 24px 0px;
+}
+
+#home .text h2 {
+    font-weight: 400;
+    font-size: 24px;
+}
+
+#home .text h3 {
+    font-weight: 700;
+    font-size: 12px;
+    color: var(--color-3);
+    text-transform: uppercase;
+    border-bottom: solid 2px var(--color-4);
+    display: inline-block;
+    margin: 0px;
+    padding: 4px 4px;
+}
+
+/* FRONT-END CSS */
+
+#front-end {
+    background-color: var(--front-end-background-color);
+    color: var(--front-end-text-color);
+}
+
+#front-end .content {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#front-end .text {
+    width: 100%;
+    padding: 0 var(--page-padding) 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#front-end .text h1, .text p {
+    margin: 0px;
+    padding: 0px;
+}
+
+#front-end .text h1 {
+    margin: 24px 0px;
+}
+
+#front-end .background .sun {
+    width: var(--front-end-sun-size);
+    height: var(--front-end-sun-size);
+    position: absolute;
+    top: var(--my-navbar-height);
+    right: var(--page-padding);
+}
+
+#front-end .background .sunrays-back,
+#front-end .background .sunrays-front,
+#front-end .background .body {
+    width: var(--front-end-sun-size);
+    height: var(--front-end-sun-size);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+#front-end .background .sunrays-back {
+    transform: translate(-50%, -50%) scale(1);
+    background-color: var(--front-end-sun-sunrays-back-color);
+    animation-name: sunrays-back;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+}
+
+#front-end .background .sunrays-front {
+    transform: translate(-50%, -50%) scale(.9);
+    background-color: var(--front-end-sun-sunrays-front-color);
+    animation-name: sunrays-front;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+}
+
+#front-end .background .body {
+    width: var(--front-end-sun-size);
+    height: var(--front-end-sun-size);
+    background-color: var(--front-end-sun-body-color);
+    transform: translate(-50%, -50%) scale(.8);
+}
+
+@keyframes sunrays-back {
+    0% {
+        border-radius: 63% 37% 63% 37% / 41% 60% 40% 59%;
+    }
+    33% {
+        border-radius: 50% 50% 51% 49% / 52% 51% 49% 48%;
+    }
+    66% {
+        border-radius: 40% 60% 42% 58% / 59% 41% 59% 41%;
+    }
+    100% {
+        border-radius: 63% 37% 63% 37% / 41% 60% 40% 59%;
+    }
+}
+
+@keyframes sunrays-front {
+    0% {
+        border-radius: 40% 60% 42% 58% / 59% 41% 59% 41%;
+    }
+    33% {
+        border-radius: 63% 37% 63% 37% / 41% 60% 40% 59%;
+    }
+    66% {
+        border-radius: 50% 50% 51% 49% / 52% 51% 49% 48%;
+    }
+    100% {
+        border-radius: 40% 60% 42% 58% / 59% 41% 59% 41%;
+    }
+}
+
+
+
+/* DESIGN CSS */
+
+#design {
+    background-color: var(--design-background-color);
+    color: var(--design-text-color);
+    position: relative;
+    padding: var(--my-navbar-height) 0 var(--my-navbar-height);
+}
+
+#design p:first-of-type {
+    margin-bottom: 16px; 
+}
+
+#design .background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    display: none;
+}
+
+#design .background .waves {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: -100px;
+}
+
+#design .background svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#design .text-flex-container {
+    padding: 0 var(--page-padding);
+}
+
+
+
+/* SOCIAL CSS */
+
+#social {
+    background-color: var(--social-background-color);
+    color: var(--social-text-color);
+    position: relative;
+    padding: 32px 0 24px;
+}
+
+#social .text {
+    padding: 0 var(--page-padding) 0;
+}
+
+#social .text h1 {
+    margin: 0 0 8px;
+    padding: 0;
+    font-size: 20px;
+}
+
+#social .text p {
+    font-size: 15px;
+}
+
+#social .text span {
+    font-weight: bold;
+}
+
+
+
+/* TABLET */
+
+@media only screen and (min-width: 600px) {
+
+    :root {
+        --page-padding: 80px;
+        --front-end-sun-size: 120px;
+    }
+
+    #my-navbar ul {
+        justify-content: flex-start;
+    }
+
+}
+
+
+
+/* DESKTOP */
+
+@media only screen and (max-width: 1499px) {
+
+    :root {
+        --page-padding: 20%;
+        --front-end-sun-size: 120px;
+        --design-bubble-size: 56px;
+    }
+
+    #my-navbar ul {
+        justify-content: flex-start;
+    }
+
+    #home .content {
+        position: unset;
+        top: unset;
+        left: unset;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    #home .text {
+        width: auto;
+        height: auto;
+        position: unset;
+        top: unset;
+        left: unset;
+        padding: unset;
+        transform: unset;
+    }
+
+    #home .text h1, 
+    #home .text h2, 
+    #home .text h3 {
+        transform: scale(1.5);
+    }
+
+    #home .text h1 {
+        margin: 40px 0;
+    }
+
+    #home .photo-container {
+        width: auto;
+        height: auto;
+        position: relative;
+    }
+
+    #home .photo-container .bg-1,
+    #home .photo-container .bg-2,
+    #home .photo-container .photo {
+        width: 400px;
+        height: 500px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+    }
+
+    #home .photo-container .bg-1 {
+        animation-name: bg-1;
+        animation-duration: 8s;
+        animation-iteration-count: infinite;
+        transform: translate(-50%, -50%) scale(1);
+        background-color: #30475e;
+    }
+
+    #home .photo-container .bg-2 {
+        animation-name: bg-2;
+        animation-duration: 8s;
+        animation-iteration-count: infinite;
+        transform: translate(-50%, -50%) scale(.95);
+        background-color: #f05454;
+    }
+
+    #home .photo-container .photo {
+        background-image: url('../img/me.png');
+        background-position: center center;
+        background-repeat: no-repeat;
+        filter: grayscale(100%) brightness(120%);
+        transform: translate(-50%, -50%) scale(.9);
+        animation-name: photo;
+        animation-duration: 8s;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes bg-1 {
+        0% {
+            border-radius: 52% 48% 56% 44% / 44% 49% 51% 56%;
+        }
+        33% {
+            border-radius: 40% 60% 42% 58% / 59% 41% 59% 41%;
+        }
+        66% {
+            border-radius: 56% 44% 48% 52% / 54% 55% 45% 46%;
+        }
+        100% {
+            border-radius: 52% 48% 56% 44% / 44% 49% 51% 56%;
+        }
+    }
+
+    @keyframes bg-2 {
+        0% {
+            border-radius: 56% 44% 48% 52% / 54% 55% 45% 46%;
+        }
+        33% {
+            border-radius: 52% 48% 56% 44% / 44% 49% 51% 56%;
+        }
+        66% {
+            border-radius: 40% 60% 42% 58% / 59% 41% 59% 41%;
+        }
+        100% {
+            border-radius: 56% 44% 48% 52% / 54% 55% 45% 46%;
+        }
+    }
+
+    @keyframes photo {
+        0% {
+            border-radius: 40% 60% 42% 58% / 59% 41% 59% 41%;
+        }
+        33% {
+            border-radius: 52% 48% 56% 44% / 44% 49% 51% 56%;
+        }
+        66% {
+            border-radius: 56% 44% 48% 52% / 54% 55% 45% 46%;
+        }
+        100% {
+            border-radius: 40% 60% 42% 58% / 59% 41% 59% 41%;
+        }
+    }
+
+    #front-end .background .sun {
+        top: calc(var(--my-navbar-height) + 56px);
+    }
+
+    #front-end .background .birds {
+        width: 900px;
+        height: 600px;
+        position: absolute;
+        top: 56px;
+        right: 0;
+        background-image: url('../img/birds.gif');
+        background-size: contain;
+        background-position: center center;
+        background-repeat: no-repeat;
+        -webkit-filter: grayscale(1) invert(1);
+        filter: grayscale(1) invert(1);
+    }
+
+    #front-end .text,
+    #design .text {
+        padding: unset;
+        width: 600px;
+    }
+
+    #design .background {
+        display: block;
+    }
+
+    #design .background .waves {
+        margin-top: -180px;
+    }
+
+    #design .background .bubbles {
+        width: 100%;
+        height: 100%;
+    }
+
+    #design .background .bubbles .bubble {
+        width: var(--design-bubble-size);
+        height: var(--design-bubble-size);
+        position: absolute;
+        animation-name: bubble-movement;
+        animation-iteration-count: infinite;
+    }
+    
+    #design .background .bubbles .bubble .bubble-effect {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-image: linear-gradient(45deg, rgba(255, 67, 230, .3), rgba(0, 217, 255, .15), rgba(0, 255, 179, .3));
+        animation-name: bubble-wobble;
+        animation-duration: 8s;
+        animation-iteration-count: infinite;
+    }   
+
+    #design .background .bubbles .bubble img {
+        height: calc(var(--design-bubble-size) / 1.5);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #design .background .bubbles .bubble.figma {
+        transform: translate(-50%, -50%) scale(2.5);
+        top: 25%;
+        left: 50%;
+        animation-duration: 8s;
+    }
+
+    #design .background .bubbles .bubble.adobe-xd {
+        transform: translate(-50%, -50%) scale(1.2);
+        top: 40%;
+        left: 66%;
+        animation-duration: 6s;
+    }
+
+    #design .background .bubbles .bubble.adobe-xd img {
+        height: calc(var(--design-bubble-size) / 1);
+    }
+
+    #design .background .bubbles .bubble.balsamiq {
+        transform: translate(-50%, -50%) scale(1.2);
+        top: 35%;
+        left: 33%;
+        animation-duration: 12s;
+    }
+
+    #design .background .diver {
+        height: 200px;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        animation-name: diver;
+        animation-duration: 16s;
+        animation-iteration-count: infinite;
+    }
+
+    #design {
+        height: 100%;
+        padding-bottom: 0px;
+    }
+
+    #design .content {
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #design .content .text {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #design .content .text-flex-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    #design .content .text-flex-container .text-left,
+    #design .content .text-flex-container .text-right {
+        width: 600px;
+        padding: 32px;
+    }
+
+    #design .content .text-flex-container .text-right {
+        padding-top: 119px;
+    }
+
+    @keyframes bubble-wobble {
+        0% {
+            border-radius: 40% 60% 42% 58% / 59% 41% 59% 41%;
+        }
+        33% {
+            border-radius: 52% 48% 56% 44% / 44% 49% 51% 56%;
+        }
+        66% {
+            border-radius: 56% 44% 48% 52% / 54% 55% 45% 46%;
+        }
+        100% {
+            border-radius: 40% 60% 42% 58% / 59% 41% 59% 41%;
+        }
+    }
+
+    @keyframes bubble-movement {
+        0% {
+            margin-top: 0;
+        }
+        50% {
+            margin-top: calc(var(--design-bubble-size) * -1);
+        }
+        100% {
+            margin-top: 0;
+        }
+    }
+
+    @keyframes diver {
+        0% {
+            left: 48%;
+        }
+        50% {
+            left: 52%;
+        }
+        100% {
+            left: 48%;
+        }
+    }
+
+}
+
+@media only screen and (min-width: 1500px) {
+
+    :root {
+        --page-padding: 20%;
+        --front-end-sun-size: 120px;
+        --design-bubble-size: 80px;
+    }
+
+}
